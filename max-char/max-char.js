@@ -11,16 +11,13 @@ function maxChar(str) {
 
   for (let ch of str) {
     if (charMap[ch]) {
-      charMap[ch]++;
+      charMap[ch] += 1;
+      if (maxCount < charMap[ch]) {
+        maxCount = charMap[ch];
+        maxCharacter = ch;
+      }
     } else {
       charMap[ch] = 1;
-    }
-  }
-
-  for (let key in charMap) {
-    if (charMap[key] > maxCount) {
-      maxCharacter = key;
-      maxCount = charMap[key];
     }
   }
 
