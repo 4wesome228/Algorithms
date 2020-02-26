@@ -5,5 +5,3 @@ function reverse(str) {
 
   // return str.split("").reverse().join("")
 }
-
-console.log(reverse(process.argv.slice(2)[0]));
